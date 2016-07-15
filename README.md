@@ -1,7 +1,7 @@
 macOS Service Discovery Tool
 =============================
 
-Python3 script that formats DHCP Request and BSDP Inform packets, broadcasts them on the local network, and then reports the responses. Responses provide insight into the DHCP and NetBoot services clients are abel to reach.
+Python3 script that formats DHCP Request and BSDP Inform packets, broadcasts them on the local network, and then reports the responses. Responses provide insight into the DHCP and NetBoot services clients are able to reach.
 
 Requirements
 -----------
@@ -19,7 +19,7 @@ usage: sdt.py [-h] [-d] [-b] [-p PLISTPATH] [-t1]
 Check, Print, and Save DHCP & BSDP Information.
 
 optional arguments:
-  -h, --help            show this help message and exit
+  -h, --help            Show this help message and exit
   -d, --dhcp            Send DHCP Broadcast and process results.
   -b, --bsdp            Send BSDP Inform and process results.
   -p PLISTPATH, -plist PLISTPATH
