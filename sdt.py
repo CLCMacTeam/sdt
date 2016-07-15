@@ -311,7 +311,7 @@ class BSDPOffer:
         self.unpack()
     
     def unpack(self):
-        print(self.data) # print out the data for testing
+        # print(self.data) # print out the data for testing
         if self.data[4:8] == self.transID :
             # print('{0}{1}'.format('Length: ', len(self.data)))
             # print(self.transID)

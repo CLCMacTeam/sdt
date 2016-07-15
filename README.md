@@ -11,6 +11,9 @@ Requirements
 
 Usage
 -----
+
+**Run program with: python3 /path/to/sdt.py**
+
 usage: sdt.py [-h] [-d] [-b] [-p PLISTPATH] [-t1]
 
 Check, Print, and Save DHCP & BSDP Information.
