@@ -451,8 +451,8 @@ if __name__ == '__main__':
                 dest='choiceDHCP', help='Send DHCP Broadcast and process results.')
     parser.add_argument( '-b', '--bsdp', action='store_true', \
                 dest='choiceBSDP', help='Send BSDP Inform and process results.')
-    parser.add_argument('-p', '-plist' , action='store', default='/Library/Preferences/org.network.plist', \
-                dest='plistPath', help='Path to plist for saving results to plist. Default: /Library/Preferences/org.network.plist')
+    parser.add_argument('-p', '-plist' , action='store', default='/Library/Preferences/edu.psu.sdt.plist', \
+                dest='plistPath', help='Path to plist for saving results to plist. Default: /Library/Preferences/edu.psu.sdt.plist')
     parser.add_argument('-t1', '--testOne', action='store_true', \
                 dest='testONE', help='Test code with stored BSDP response from OS X Server, writing to /tmp/org.network.plist.')
     args = parser.parse_args()
