@@ -7,6 +7,7 @@ Requirements
 -----------
 
 **Python3** - Python3 provides better handling of bytes objects
+
 **Admin Privileges** - This script requires sudo rights
 
 Usage
