@@ -1,3 +1,8 @@
+¡This Project has moved!
+====================
+Please find the latest commits for sdt at [https://git.psu.edu/sysman/ServiceDiscoveryTool](https://git.psu.edu/sysman/ServiceDiscoveryTool)
+
+
 macOS Service Discovery Tool
 =============================
 
