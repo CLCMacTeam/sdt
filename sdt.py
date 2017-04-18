@@ -145,7 +145,6 @@ def writeBSDPPlist(plistPath,offers):
     Write BSDP info to Plist for Service Discovery Tool.
     Test with QnA: 
     concatenations " " of  ("Server:"; concatenations " nbis=(" of  ( strings "ip" of it; ( concatenations "; " of (concatenation ", " of (strings "name" of it; strings "id" of it; booleans "default" of it as string) ) of dictionaries of values of arrays "nbis" of it ) );")" ) of dictionaries of values of array "bsdp" of dictionary of file "/tmp/new.plist"
-
     '''
     
     # Create Variables for DHCP Info
@@ -497,7 +496,7 @@ if __name__ == '__main__':
         
         bsdpOffers = []
         #receiving DHCPOffer packet  
-        dhcps.settimeout(10)
+        dhcps.settimeout(30)
         try:
             while True:
                 data = dhcps.recv(1024)
@@ -506,16 +505,22 @@ if __name__ == '__main__':
                     bsdpOffers.append(offer)
         except socket.timeout as e:
             print(e)
-            print("Results : ")
+            
         # Close the socket connection
         dhcps.close()
-        # Print the offers
-        bsdpOffers[0].printBSDPOffer()
-        if len(bsdpOffers) > 1:
-            for i in range(1, len(bsdpOffers)):
-                bsdpOffers[1].printBSDPOffer()
-        # send writeBSDPPlist the name of the plist and a list of offers
-        writeBSDPPlist(plistPath,bsdpOffers)
+        
+        print("Results : ")
+        # Print out options
+        try:
+            # Print the offers
+            bsdpOffers[0].printBSDPOffer()
+            if len(bsdpOffers) > 1:
+                for i in range(1, len(bsdpOffers)):
+                    bsdpOffers[1].printBSDPOffer()
+            # send writeBSDPPlist the name of the plist and a list of offers
+            writeBSDPPlist(plistPath,bsdpOffers)
+        except:
+            print("No Results for BSDP")
         
     # Yay
     exit()
