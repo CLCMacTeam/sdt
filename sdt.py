@@ -496,7 +496,7 @@ if __name__ == '__main__':
         
         bsdpOffers = []
         #receiving DHCPOffer packet  
-        dhcps.settimeout(30)
+        dhcps.settimeout(10)
         try:
             while True:
                 data = dhcps.recv(1024)
